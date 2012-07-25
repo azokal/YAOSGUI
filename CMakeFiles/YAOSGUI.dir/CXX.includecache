@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/consta_m/Projet/YAOSGUI/src/Scene.cpp
+iostream
+-
+Scene.hh
+/home/consta_m/Projet/YAOSGUI/src/Scene.hh
+
+inc/IObject.hh
+SFML/Graphics.hpp
+-
+
+inc/Scene.hh
+IObject.hh
+inc/IObject.hh
+

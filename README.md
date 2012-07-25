@@ -1,4 +1,4 @@
 YAOSGUI
 =======
 
-Yet A Other SFML GUI
+Yet A Other SFML GUI.

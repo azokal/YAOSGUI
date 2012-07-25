@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -W -Wextra -Wall   -shared -Wl,-soname,libYAOSGUI.so -o lib/libYAOSGUI.so CMakeFiles/YAOSGUI.dir/src/Scene.cpp.o CMakeFiles/YAOSGUI.dir/src/Button.cpp.o CMakeFiles/YAOSGUI.dir/src/DesignButton.cpp.o 

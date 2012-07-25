@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/consta_m/Projet/YAOSGUI/src/DesignButton.cpp
+DesignButton.hh
+/home/consta_m/Projet/YAOSGUI/src/DesignButton.hh
+
