@@ -15,20 +15,29 @@
 int main()
 {
   // Create the main rendering window
+  sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Graphics");
 
+  // Create button design
   ygui::DesignButton d(200.0, 50.0);
   ygui::DesignButton d1(200.0, 50.0);
-  sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Graphics");
+
+  // Create Button with previous design
   ygui::Button	test(d);
   ygui::Button	test1(d1);
+
+  // Create Scene
   ygui::Scene	scene;
 
+  // Modify position Button
   test.setX(50.0);
   test.setY(50.0);
   test1.setX(50.0);
   test1.setY(200.0);
+
+  // Add button to scene
   scene.addObject("1", &test);
   scene.addObject("2", &test1);
+
   // Start game loop
   while (App.IsOpened())
     {
@@ -43,7 +52,10 @@ int main()
 
       // Clear the screen (fill it with black color)
       App.Clear();
+
+      // Draw scene
       scene.draw(App);
+      
       // Display window contents on screen
       App.Display();
     }
