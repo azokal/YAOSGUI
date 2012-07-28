@@ -151,6 +151,9 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for target
+YAOSGUI-s_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 YAOSGUI_BINARY_DIR:STATIC=/home/consta_m/Projet/YAOSGUI
 

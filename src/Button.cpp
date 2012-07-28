@@ -5,7 +5,7 @@
 // Login   <consta_m@epitech.net>
 // 
 // Started on  Tue Jun 12 10:46:20 2012 maxime constantinian
-// Last update Thu Jul 26 01:05:58 2012 maxime constantinian
+// Last update Fri Jul 27 16:20:57 2012 maxime constantinian
 //
 
 #include "Button.hh"
@@ -47,11 +47,13 @@ void		ygui::Button::setHeight(float height)
 void		ygui::Button::setX(float x)
 {
   _design.getSprite()->SetX(x);
+  _msg.SetX(x + _posXText);
 }
 
 void		ygui::Button::setY(float y)
 {
   _design.getSprite()->SetY(y);
+  _msg.SetY(y + _posYText);
 }
 
 float		ygui::Button::getWidth()
@@ -74,9 +76,46 @@ float		ygui::Button::getY()
   return _design.getSprite()->GetPosition().y;
 }
 
+void		ygui::Button::setTextSize(int size)
+{
+  _msg.SetSize(size);
+}
+
+void		ygui::Button::setTextColor(int r, int b, int g)
+{
+  _msg.SetColor(sf::Color(r, b, g));
+}
+
+void		ygui::Button::setTextColor(sf::Color c)
+{
+  _msg.SetColor(c);
+}
+
+void		ygui::Button::setTextRotation(float r)
+{
+  _msg.SetRotation(r);
+}
+
+void		ygui::Button::setTextFont(std::string path, int size)
+{
+  sf::Font font;
+
+  if (!font.LoadFromFile(path, size))
+    {
+      std::cout << "Cannot load " << path << std::endl;
+    }
+  else
+    {
+      _msg.SetFont(font);
+      _msg.SetSize(size);
+    }
+}
+
 void		ygui::Button::setText(std::string msg)
 {
   _msg.SetText(msg);
+  _msg.SetX(_design.getSprite()->GetPosition().x + _posXText);
+  _msg.SetY(_design.getSprite()->GetPosition().y + _posYText);
 }
 
 void		ygui::Button::setText(std::string msg, float x, float y)
@@ -84,16 +123,20 @@ void		ygui::Button::setText(std::string msg, float x, float y)
   _msg.SetText(msg);
   _posXText = x;
   _posYText = y;
+  _msg.SetX(_design.getSprite()->GetPosition().x + _posXText);
+  _msg.SetY(_design.getSprite()->GetPosition().y + _posYText);
 }
 
 void		ygui::Button::setTextX(float x)
 {
   _posXText = x;
+  _msg.SetX(_design.getSprite()->GetPosition().x + _posXText);
 }
 
 void		ygui::Button::setTextY(float y)
 {
   _posYText = y;
+  _msg.SetY(_design.getSprite()->GetPosition().y + _posYText);
 }
 
 void	ygui::Button::onEvent(sf::RenderWindow &app)
@@ -105,4 +148,5 @@ void	ygui::Button::onEvent(sf::RenderWindow &app)
 void	ygui::Button::draw(sf::RenderWindow &app)
 {
   app.Draw(*(_design.getSprite()));
+  app.Draw(_msg);
 }

@@ -6,17 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/consta_m/Projet/YAOSGUI/src/Scene.cpp
+/home/consta_m/Projet/YAOSGUI/src/Button.cpp
+Button.hh
+/home/consta_m/Projet/YAOSGUI/src/Button.hh
+
+inc/Button.hh
+SFML/Graphics.hpp
+-
 iostream
 -
-Scene.hh
-/home/consta_m/Projet/YAOSGUI/src/Scene.hh
+IObject.hh
+inc/IObject.hh
+DesignButton.hh
+inc/DesignButton.hh
+
+inc/DesignButton.hh
+SFML/Graphics.hpp
+-
+string
+-
+IDesign.hh
+inc/IDesign.hh
+
+inc/IDesign.hh
+SFML/Graphics.hpp
+-
 
 inc/IObject.hh
 SFML/Graphics.hpp
 -
-
-inc/Scene.hh
-IObject.hh
-inc/IObject.hh
 

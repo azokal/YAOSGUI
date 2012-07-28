@@ -15,3 +15,9 @@ add_library(
         SHARED
         ${source_files}
 )
+
+# add_library(
+#         YAOSGUI-s
+#         STATIC
+#         ${source_files} ./extlib/libsfml-system-s.a
+# )

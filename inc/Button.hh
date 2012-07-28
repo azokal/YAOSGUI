@@ -5,7 +5,7 @@
 // Login   <consta_m@epitech.net>
 // 
 // Started on  Tue May 15 12:04:50 2012 maxime constantinian
-// Last update Thu Jul 26 01:04:34 2012 maxime constantinian
+// Last update Fri Jul 27 16:20:04 2012 maxime constantinian
 //
 
 #ifndef BUTTON_HH
@@ -48,6 +48,11 @@ namespace ygui
     void		setText(std::string msg, float x, float y);
     void		setTextX(float);
     void		setTextY(float);
+    void		setTextSize(int size);
+    void		setTextColor(int r, int b, int g);
+    void		setTextColor(sf::Color c);
+    void		setTextRotation(float r);
+    void		setTextFont(std::string path, int size);
     virtual void	onEvent(sf::RenderWindow &);
     virtual void	draw(sf::RenderWindow &);
   };

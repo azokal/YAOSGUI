@@ -185,28 +185,55 @@ int main()
     // Preserve OpenGl States
     App.PreserveOpenGLStates(true);
 
+    // Create Cube
     Cube c;
 
+    // Create design
     ygui::DesignButton d(200.0, 50.0);
     ygui::DesignButton d1(200.0, 50.0);
     ygui::DesignButton d2(50.0, 200.0);
     ygui::DesignButton d3(50.0, 200.0);
 
+    // Create Button
     CubeButtonUp	test(d, &c);
     CubeButtonDown	test1(d1, &c);
     CubeButtonLeft	test2(d2, &c);
     CubeButtonRight	test3(d3, &c);
 
+    // Create scene
     ygui::Scene	scene;
 
+    // Set button setting
     test.setX(300.0);
     test.setY(50.0);
+    test.setText("Up");
+    test.setTextColor(0, 0, 0);
+    test.setTextY(3.0);
+    test.setTextX(80.0);
+
     test1.setX(300.0);
     test1.setY(500.0);
+    test1.setText("Down");
+    test1.setTextColor(0, 0, 0);
+    test1.setTextY(3.0);
+    test1.setTextX(65.0);
+
     test2.setX(50.0);
     test2.setY(200.0);
+    test2.setText("Left");
+    test2.setTextColor(0, 0, 0);
+    test2.setTextX(5.0);
+    test2.setTextY(125.0);
+    test2.setTextRotation(90.0f);
+
     test3.setX(700.0);
     test3.setY(200.0);
+    test3.setText("Right");
+    test3.setTextColor(0, 0, 0);
+    test3.setTextX(45.0);
+    test3.setTextY(55.0);
+    test3.setTextRotation(270.0f);
+
     scene.addObject("1", &test);
     scene.addObject("2", &test1);
     scene.addObject("3", &test2);

@@ -5,7 +5,7 @@
 // Login   <consta_m@epitech.net>
 // 
 // Started on  Wed Jul 25 02:58:51 2012 maxime constantinian
-// Last update Thu Jul 26 01:08:00 2012 maxime constantinian
+// Last update Fri Jul 27 16:23:27 2012 maxime constantinian
 //
 
 #include "../inc/Scene.hh"
@@ -33,6 +33,10 @@ int main()
   test.setY(50.0);
   test1.setX(50.0);
   test1.setY(200.0);
+
+  // Set text
+  test.setText("Lapin", 63, 5);
+  test.setTextColor(0, 0, 0);
 
   // Add button to scene
   scene.addObject("1", &test);
